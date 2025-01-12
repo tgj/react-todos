@@ -1,6 +1,6 @@
 # React To-Dos
 
-[Homepage](https://tgj.github.io/react-todos)
+[Web App](https://tgj.github.io/react-todos)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
