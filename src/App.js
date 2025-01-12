@@ -13,7 +13,7 @@ function App() {
   /* State */
   const defaultState = [
     {
-      name: "To-do",
+      name: "To-Do",
       todos: [],
     },
     {
