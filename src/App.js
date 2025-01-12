@@ -165,7 +165,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="panel">
+      <nav className="panel is-info">
         <p className="panel-heading">{new Date().toDateString()}</p>
         <p className="panel-tabs">{displayListHeading}</p>
         {displayTodos}
