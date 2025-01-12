@@ -44,3 +44,23 @@
 .full-width {
   width: 98%;
 }
+
+.level {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.todo-left,
+.todo-right {
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.todo-left {
+  display: flex;
+  flex: 98; /* Equal width for both divs */
+}
+
+.todo-right {
+  flex: 2; /* Equal width for both divs */
+}

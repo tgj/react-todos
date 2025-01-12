@@ -106,23 +106,20 @@ function App() {
   const displayTodos = lists[listIndex].todos.map((todo) => {
     return (
       <a className="panel-block is-block" key={todo.id}>
-        <nav className="level">
-          <div
-            className="level-left full-width"
-            onClick={() => goToNextList(todo)}
-          >
-            <p className={"level-item " + (onFinalList ? "complete" : "")}>
+        <div className="level">
+          <div className="todo-left" onClick={() => goToNextList(todo)}>
+            <p className={"" + (onFinalList ? "complete" : "")}>
               {todo.description}
             </p>
           </div>
-          <div className="level-right">
+          <div className="todo-right">
             {!onFinalList && (
-              <p className="level-item" onClick={() => removeTodo(todo)}>
+              <p className="" onClick={() => removeTodo(todo)}>
                 <FaRegTrashCan size={iconSize} />
               </p>
             )}
           </div>
-        </nav>
+        </div>
       </a>
     );
   });
@@ -165,13 +162,13 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="panel is-info">
+      <div className="panel is-primary">
         <p className="panel-heading">{new Date().toDateString()}</p>
         <p className="panel-tabs">{displayListHeading}</p>
         {displayTodos}
         {canAddTodo && displayAddTodo}
         {canDisplayArchiveTodos && displayArchiveTodos}
-      </nav>
+      </div>
     </div>
   );
 }
