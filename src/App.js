@@ -214,7 +214,7 @@ function App() {
                   boxShadow: "none",
                 }}
               >
-                <h1 className="list-name">List</h1>
+                <h1 className="list-name">{current.name}</h1>
                 <RiArrowDropDownLine color="black" size={30} />
               </button>
             </div>
