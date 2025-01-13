@@ -195,7 +195,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="panel is-info">
+      <div
+        className="panel is-info"
+        style={{
+          boxShadow: "none",
+        }}
+      >
         <div className="panel-heading">
           <div
             className={"dropdown " + (listSelectDropdown ? "is-active" : "")}
