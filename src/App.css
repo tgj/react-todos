@@ -64,3 +64,9 @@
 .todo-right {
   flex: 2; /* Equal width for both divs */
 }
+
+.list-name {
+  font-size: 2rem;
+  color: black;
+  font-weight: 600;
+}
