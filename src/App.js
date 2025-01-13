@@ -215,7 +215,7 @@ function App() {
                 }}
               >
                 <h1 className="list-name">{current.name}</h1>
-                <RiArrowDropDownLine color="black" size={30} />
+                <RiArrowDropDownLine size={30} />
               </button>
             </div>
             <div

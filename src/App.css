@@ -67,6 +67,9 @@
 
 .list-name {
   font-size: 2rem;
-  color: black;
   font-weight: 600;
+}
+
+.panel-heading {
+  background-color: transparent;
 }
