@@ -4,7 +4,8 @@ import "./App.css";
 import { useState, useEffect, useMemo } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { FaRegTrashCan } from "react-icons/fa6";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
+import { FcCheckmark } from "react-icons/fc";
 
 const APP_NAME = "io.tgjohns.todos";
 const API_KEY = `${APP_NAME}.API_KEY`;
@@ -220,7 +221,11 @@ function App() {
                 }}
               >
                 <h1 className="list-name">{current.name}</h1>
-                <RiArrowDropDownLine size={30} />
+                {listSelectDropdown ? (
+                  <RiArrowDropUpLine size={30} />
+                ) : (
+                  <RiArrowDropDownLine size={30} />
+                )}
               </button>
             </div>
             <div
@@ -228,11 +233,22 @@ function App() {
               id="dropdown-menu"
               role="menu"
               style={{
-                left: "-4rem",
+                left: "-3rem",
                 width: "15rem",
               }}
             >
               <div className="dropdown-content pr-4">
+                {lists.map((list) => (
+                  <a className="dropdown-item">
+                    <span>
+                      {currentListId === list.id && (
+                        <FcCheckmark size={iconSize} />
+                      )}
+                      &nbsp;
+                      {list.name}
+                    </span>
+                  </a>
+                ))}
                 <a className="dropdown-item">
                   <input type="text" className="input" />
                   &nbsp;
