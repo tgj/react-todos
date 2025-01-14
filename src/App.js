@@ -239,7 +239,7 @@ function App() {
             >
               <div className="dropdown-content pr-4">
                 {lists.map((list) => (
-                  <a className="dropdown-item">
+                  <a className="dropdown-item" key={list.id}>
                     <span>
                       {currentListId === list.id && (
                         <FcCheckmark size={iconSize} />
